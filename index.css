@@ -1,0 +1,181 @@
+p {
+  margin: 0;
+}
+
+.page {
+  padding: clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem);
+  block-size: calc(100dvh - clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem) * 2);
+  margin: 0 auto;
+  max-block-size: 1440px;
+  background-color: #bc4b51;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+.game {
+  background-color: #fff;
+  border-radius: clamp(1.25rem, 0.625rem + 2.7778vw, 3.125rem);
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto 1fr;
+}
+
+.title {
+  font-size: clamp(1.125rem, 0.8333rem + 1.2963vw, 2rem);
+  text-transform: uppercase;
+  color: #bc4b51;
+  font-family: "Cinzel", serif;
+}
+
+.game-interface {
+  inline-size: calc(100dvw - clamp(1.25rem, 0.8333rem + 1.8519vw, 2.5rem) * 2);
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-part {
+  display: flex;
+  align-items: center;
+  block-size: clamp(15.625rem, 11.25rem + 19.4444vw, 28.75rem);
+}
+
+.svg-gallow {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.head,
+.body,
+.right-hand,
+.left-hand,
+.right-foot,
+.left-foot {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.user-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.25rem, 0.4167rem + 3.7037vw, 3.75rem);
+}
+
+.user-part__word {
+  font-size: clamp(2.5rem, 1.6667rem + 3.7037vw, 5rem);
+  text-transform: uppercase;
+}
+
+.user-part__word-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.3125rem, 0.1042rem + 0.9259vw, 0.9375rem);
+  font-size: clamp(1.125rem, 0.9583rem + 0.7407vw, 1.625rem);
+  align-items: center;
+}
+
+.user-part__keyboard {
+  border: 2px solid #5b8e7d;
+  inline-size: clamp(17.5rem, 11.875rem + 25vw, 34.375rem);
+  border-radius: clamp(0.3125rem, 0rem + 1.3889vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.1875rem, 0.0417rem + 0.6481vw, 0.625rem);
+  padding: clamp(0.625rem, 0.4167rem + 0.9259vw, 1.25rem);
+}
+
+.row {
+  display: flex;
+  gap: clamp(0.1875rem, 0.0417rem + 0.6481vw, 0.625rem);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #5b8e7d;
+}
+
+.key {
+  font-size: clamp(1.125rem, 1rem + 0.5556vw, 1.5rem);
+  border-radius: clamp(0.3125rem, 0rem + 1.3889vw, 1.25rem);
+  inline-size: clamp(1.75rem, 1.2917rem + 2.037vw, 3.125rem);
+  block-size: clamp(1.75rem, 1.2917rem + 2.037vw, 3.125rem);
+}
+
+button:hover {
+  background-color: #5b8e7d7b;
+}
+
+button:active {
+  background-color: #5b8e7d7b;
+  color: #fff;
+}
+
+.key-pressed {
+  background-color: #5b8e7d7b;
+  color: #fff;
+  cursor: default;
+}
+
+.key-pressed:hover {
+  background-color: #5b8e7d7b;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+}
+
+.popup-is-opened {
+  display: flex;
+}
+
+.popup__content {
+  border: 5px solid #f4a259;
+  font-size: 18px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: clamp(17.5rem, 14.375rem + 13.8889vw, 26.875rem);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  box-sizing: border-box;
+  padding: clamp(0.625rem, 0.0833rem + 2.4074vw, 2.25rem);
+}
+
+.popup__content p {
+  block-size: 18px;
+}
+
+.button_popup {
+  inline-size: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message {
+  font-size: clamp(1.125rem, 1rem + 0.5556vw, 1.5rem);
+}
+
+@media (max-width: 767px) {
+  .game-interface {
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <script type="module" src="./components/index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <main class="game">
+      <section>
+        <h1 class="title">Hangman game</h1>
+      </section>
+      <div class="game-interface">
+        <section class="visual-part">
+          <svg
+            class="svg-gallow"
+            width="336"
+            height="540"
+            viewBox="0 0 336 540"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="56.5"
+              y1="-3.27835e-07"
+              x2="56.5"
+              y2="540"
+              stroke="#F4A259"
+              stroke-width="15"
+            />
+            <line
+              x1="319"
+              y1="50.5"
+              y2="50.5"
+              stroke="#F4A259"
+              stroke-width="15"
+            />
+            <line
+              x1="167.303"
+              y1="50.8704"
+              x2="54.3033"
+              y2="163.87"
+              stroke="#F4A259"
+              stroke-width="15"
+            />
+            <line
+              x1="266.5"
+              y1="119"
+              x2="266.5"
+              y2="53"
+              stroke="#F4A259"
+              stroke-width="5"
+            />
+            <path
+              class="right-hand"
+              d="M269 219L332 295"
+              stroke="#909090"
+              stroke-width="7"
+            />
+            <path
+              class="left-hand"
+              d="M204 294.997L267.004 219"
+              stroke="#909090"
+              stroke-width="7"
+            />
+            <path
+              class="body"
+              d="M268 350L268 220"
+              stroke="#909090"
+              stroke-width="7"
+            />
+            <path
+              class="right-foot"
+              d="M268 348L331 424"
+              stroke="#909090"
+              stroke-width="7"
+            />
+            <path
+              class="left-foot"
+              d="M205.496 424.997L268.5 349"
+              stroke="#909090"
+              stroke-width="7"
+            />
+            <circle
+              class="head"
+              cx="265.5"
+              cy="169.5"
+              r="47"
+              stroke="#909090"
+              stroke-width="7"
+            />
+          </svg>
+        </section>
+        <section class="user-part">
+          <div class="user-part__word-container">
+            <p class="user-part__word">_ _ _ _</p>
+            <p class="user-part__hint">Hint: hello, hello</p>
+            <p class="user-part__errors">Incorrect guesses: 0/6</p>
+          </div>
+          <div class="user-part__keyboard">
+            <div class="row">
+              <button class="key">A</button>
+              <button class="key">B</button>
+              <button class="key">C</button>
+              <button class="key">D</button>
+              <button class="key">E</button>
+              <button class="key">F</button>
+              <button class="key">G</button>
+              <button class="key">H</button>
+              <button class="key">I</button>
+            </div>
+            <div class="row">
+              <button class="key">J</button>
+              <button class="key">K</button>
+              <button class="key">L</button>
+              <button class="key">M</button>
+              <button class="key">N</button>
+              <button class="key">O</button>
+              <button class="key">P</button>
+              <button class="key">Q</button>
+              <button class="key">R</button>
+            </div>
+            <div class="row">
+              <button class="key">S</button>
+              <button class="key">T</button>
+              <button class="key">U</button>
+              <button class="key">V</button>
+              <button class="key">W</button>
+              <button class="key">X</button>
+              <button class="key">Y</button>
+              <button class="key">Z</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="popup">
+      <div class="popup__content">
+        <p class="message"></p>
+        <p class="word"></p>
+        <button class="button button_popup">Start again</button>
+      </div>
+    </div>
+  </body>
+</html>
