@@ -2,6 +2,7 @@
 
 ## Overview
 This Hangman game is a simple, interactive web-based application. Players try to guess a hidden word by entering letters. Each incorrect guess brings the player one step closer to losing. The game features a virtual keyboard and responsive design, making it playable on various devices.
+#### [Here you can play the game](https://makarovaiuliia.github.io/hangman/)
 
 ## Features
 - Interactive virtual keyboard.
