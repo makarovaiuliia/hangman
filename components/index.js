@@ -147,11 +147,19 @@ function showPopup(message) {
 }
 
 popupButton.addEventListener("click", handlePopupClick);
+document.addEventListener("keydown", handlePopupClick);
 
-function handlePopupClick() {
-  clearGame();
-  startGame();
-  popup.classList.remove("popup-is-opened");
+function handlePopupClick(event) {
+  if (
+    (event.type === "keydown" &&
+      event.key === "Enter" &&
+      popup.classList.contains("popup-is-opened")) ||
+    event.type === "click"
+  ) {
+    clearGame();
+    startGame();
+    popup.classList.remove("popup-is-opened");
+  }
 }
 
 function clearGame() {
